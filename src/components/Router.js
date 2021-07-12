@@ -5,16 +5,15 @@ import Note from "../routes/Note";
 import styled from "styled-components";
 
 const AppRouter = ({ isLoggedIn, userObj }) => {
-  console.log(userObj);
   return (
     <Router>
       <Switch>
         {isLoggedIn ? (
-          <div>
+          <NoteDiv>
             <Route exact path="/">
               <Note userObj={userObj} />
             </Route>
-          </div>
+          </NoteDiv>
         ) : (
           <div>
             <Route exact path="/">
@@ -28,3 +27,8 @@ const AppRouter = ({ isLoggedIn, userObj }) => {
 };
 
 export default AppRouter;
+
+const NoteDiv = styled.div`
+  width: 100%;
+  height: 100vh;
+`;

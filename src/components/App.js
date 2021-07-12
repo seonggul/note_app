@@ -25,7 +25,7 @@ const App = () => {
       setInitial(true);
     });
   }, []);
-  const refreshUser = () => {
+  /*   const refreshUser = () => {
     const user = authService.currentUser;
     // user를 빈 배열에 복사하는 것. 리엑트는 이렇게 되면 변화를 감지하고 리렌더링한다.
     //setUserObj(Object.assign({}, user));
@@ -34,7 +34,7 @@ const App = () => {
       uid: user.uid,
       updateProfile: (args) => user.updateProfile(args),
     });
-  };
+  }; */
   return (
     <DivInitial>
       {initial ? (
@@ -50,5 +50,6 @@ export default App;
 
 const DivInitial = styled.div`
   display: flex;
+  width: 100vw;
   height: 100vh;
 `;

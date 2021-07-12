@@ -17,7 +17,6 @@ const Auth = () => {
     } else if (name === "password") {
       setPassword(value);
     }
-    console.log(email, password);
   };
 
   const onSubmit = async (event) => {
@@ -91,7 +90,7 @@ const Bg = styled.div`
   align-items: center;
   align-content: center;
   height: 100vh;
-  width: auto;
+  width: 100vw;
 
   /*   background-image: url("background.jpg");
   background-position: center; */
